@@ -25,7 +25,7 @@ login: function(req ,res){
 loginp: async function(req ,res){
 var data = await Main.findOne(req.allParams())
 if (!data) {
-  return res.send('Login Info Incorrect')
+  return res.redirect('/login?e2')
 }
 else{
 res.cookie('token', atob(data.uname))
@@ -44,7 +44,7 @@ signupp: async function(req ,res){
 var data = await Main.create(req.allParams()).fetch()
 
 if (!data) {
-  return res.redirect('/signup?e=2')
+  return res.redirect('/signup?e2')
 }
 else{
 res.cookie('token', atob(data.uname))
