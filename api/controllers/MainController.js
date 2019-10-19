@@ -60,6 +60,7 @@ catch(e){
 }
 
 },
+
 profile: async function(req, res){
   if (req.cookies.token == '' || req.cookies.token == undefined || req.cookies.token == null) {
     return res.redirect('/login')

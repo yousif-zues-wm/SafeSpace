@@ -12,8 +12,8 @@ module.exports.routes = {
 
 'GET /' : 'Main/index',
 'GET /login': 'Main/login',
-'POST /login' : 'Main/loginp',
-'GET /signup': 'Main/signup',
-'POST /signup' : 'Main/signupp',
-'GET /profile' : 'Main/profile'
+'POST /login' : 'Main/loginp', 
+'GET /signup': 'Main/signup', 
+'POST /signup' : 'Main/signupp', 
+'GET /profile' : 'Main/profile' 
 };
