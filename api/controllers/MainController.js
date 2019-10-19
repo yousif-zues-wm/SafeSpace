@@ -80,6 +80,35 @@ profile: async function(req, res){
   } catch (e) {
   res.redirect('/login')
   }
+},
+logout: function(req, res){
+  if (req.cookies.token == '' || req.cookies.token == undefined || req.cookies.token == null) {
+    return res.redirect('/')
+  }
+  else{
+    res.clearCookie('token')
+    return res.redirect('/')
+  }
 }
+
+
+// LOGIN SHIT ABOVE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 };
