@@ -1,0 +1,6 @@
+{"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
+{"$$indexCreated":{"fieldName":"CompanyName","unique":true,"sparse":false}}
+{"$$indexCreated":{"fieldName":"Description","unique":true,"sparse":false}}
+{"$$indexCreated":{"fieldName":"PhoneNumber","unique":true,"sparse":false}}
+{"$$indexCreated":{"fieldName":"uname","unique":true,"sparse":false}}
+{"createdAt":1571525313789,"updatedAt":1571525313789,"id":1,"CompanyName":"Uber","Description":"transportation","PhoneNumber":"1111111111","uname":"test","pw":"1234","Submit":"Submit","_id":1}
