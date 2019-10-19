@@ -110,5 +110,4 @@ logout: function(req, res){
 
 
 
-
 };
