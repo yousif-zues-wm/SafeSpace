@@ -20,7 +20,12 @@ module.exports = {
       required: true,
       unique: false,
       maxLength: 32
-    }, 
+    },
+    oobo: {
+      type: 'string',
+      required: false,
+      unique: false
+    },
     Submit: {
       type: 'string',
       required: false,

@@ -1,5 +1,6 @@
 {"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
 {"$$indexCreated":{"fieldName":"CompanyName","unique":true,"sparse":false}}
+{"$$indexCreated":{"fieldName":"Description","unique":true,"sparse":false}}
 {"$$indexCreated":{"fieldName":"PhoneNumber","unique":true,"sparse":false}}
 {"$$indexCreated":{"fieldName":"uname","unique":true,"sparse":false}}
 {"createdAt":1571539367539,"updatedAt":1571539367539,"id":1,"CompanyName":"geeg","Description":"geeg dont care","PhoneNumber":"222-222-2222","uname":"geeg","pw":"geeg","Submit":"Submit","_id":1}
