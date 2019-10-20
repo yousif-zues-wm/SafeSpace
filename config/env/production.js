@@ -250,9 +250,9 @@ module.exports = {
     * > Be sure to use the right protocol!  ("http://" vs. "https://")         *
     *                                                                          *
     ***************************************************************************/
-    // onlyAllowOrigins: [
-    //   'https://https://safe-space-cad.herokuapp.com/ '
-    // ],
+    onlyAllowOrigins: [
+      'https://safespace01.herokuapp.com/ '
+    ],
 
 
     /***************************************************************************
@@ -370,7 +370,7 @@ module.exports = {
   *                                                                         *
   ***************************************************************************/
   custom: {
-    baseUrl: 'https://example.com',
+    // baseUrl: 'https://example.com',
     internalEmailAddress: 'support@example.com',
 
     // mailgunDomain: 'mg.example.com',
