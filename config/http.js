@@ -30,7 +30,6 @@ module.exports.http = {
     ***************************************************************************/
 
     order: [
-      'trustProxy',
       'cookieParser',
       'session',
       'bodyParser',
