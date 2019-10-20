@@ -250,9 +250,9 @@ module.exports = {
     * > Be sure to use the right protocol!  ("http://" vs. "https://")         *
     *                                                                          *
     ***************************************************************************/
-    // onlyAllowOrigins: [
-    //   'https://https://safe-space-cad.herokuapp.com/ '
-    // ],
+    onlyAllowOrigins: [
+      'https://safespace01.herokuapp.com/ '
+    ],
 
 
     /***************************************************************************
