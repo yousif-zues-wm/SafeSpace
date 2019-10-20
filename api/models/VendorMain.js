@@ -17,7 +17,7 @@ module.exports = {
     Description: {
       type: 'string',
       required: true,
-      unique: true,
+      unique: false,
       maxLength: 200
     },
     PhoneNumber: {
@@ -25,11 +25,6 @@ module.exports = {
       required: true,
       unique: true,
       maxLength: 200
-    },
-    logo : {
-      type : 'string',
-      required: true,
-      unique: true,
     },
     uname: {
       type: 'string',
@@ -53,4 +48,3 @@ module.exports = {
   },
 
 };
-

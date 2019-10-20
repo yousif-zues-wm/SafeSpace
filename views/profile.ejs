@@ -1,15 +1,109 @@
+<style media="screen">
+
+/* equal card height */
+.row-equal > div[class*='col-'] {
+    display: flex;
+    flex: 1 0 auto;
+}
+
+.row-equal .card {
+   width: 100%;
+}
+
+/* ensure equal card height inside carousel */
+.carousel-inner>.row-equal.active,
+.carousel-inner>.row-equal.next,
+.carousel-inner>.row-equal.prev {
+    display: flex;
+}
+
+/* prevent flicker during transition */
+.carousel-inner>.row-equal.active.left,
+.carousel-inner>.row-equal.active.right {
+    opacity: 0.5;
+    display: flex;
+}
+
+
+/* control image height */
+.card-img-top-250 {
+    max-height: 250px;
+    overflow:hidden;
+}
+
+
+.card-header{color:dodger
+</style>
 <div class="container">
 <br>
 <center>
-  <h2>Welcome <%= data.uname %> </h2>
-  <center>
+  <h2>Welcome <%= data.user.uname %> </h2><br>
+  <p>Please select a support company below</p><hr>
 
-    <div class="card" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
+
+
+
+
+<section data-interval="false" class="carousel slide" data-ride="carousel" id="postsCarousel">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-right mb-4">
+                <a class="btn btn-outline-secondary prev" href="" title="go back"><i class="fa fa-lg fa-chevron-left"></i></a>
+                <a class="btn btn-outline-secondary next" href="" title="more"><i class="fa fa-lg fa-chevron-right"></i></a>
+            </div>
+        </div>
     </div>
-</div>
+    <div class="container p-t-0 m-t-2 carousel-inner">
+        <div class="row row-equal carousel-item active m-t-0">
+          <% var val = 0 %>
+          <% data.vendor.forEach(function(data) { %>
+            <% if ( val != 0 && val % 3 == 0){ %>
+            </div>
+            <div class="row row-equal carousel-item m-t-0">
+    <%} %>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-block p-t-2">
+                        <div class="card-header"><h3><%= data.CompanyName %></h3></div><br>
+                        <div class="card-text"><p><%= data.Description %></p> <br>
+                          <p><%= data.PhoneNumber %></p><br>
+
+                          <button type="button" class='btn btn-info'  name="button">View <%= data.CompanyName %></button>
+
+                        </div><br>
+                        <div class="card-footer">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+<% val = val + 1 %>
+<% }) %>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script>
+   (function($){
+	   "use strict";
+	   $('.next').click(function(){ $('.carousel').carousel('next');return false; });
+	   $('.prev').click(function(){ $('.carousel').carousel('prev');return false; });
+   })
+   (jQuery);
+</script>
