@@ -27,7 +27,7 @@ module.exports = {
       maxLength: 200
     },
     logo : {
-      type : 'string'
+      type : 'string',
       required: true,
       unique: true,
     },

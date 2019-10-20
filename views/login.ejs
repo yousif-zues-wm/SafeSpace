@@ -1,7 +1,14 @@
+<style media="screen">
+  #error{
+    display: none;
+  }
+</style>
 <div class="container">
 <center>
+  <br>
 <h2>Login</h2><hr>
 </center>
+<h5 style='color:red;display: none;' id='error'>Error, Login Info Incorrect, please try again.</h5>
 
 <form class="from" action="/login" method="post">
   <label for="uname">Username</label>
@@ -10,11 +17,18 @@
 <input class='form-control' type="password" name="pw" placeholder='Password' value=""><br>
 <input type="submit" name="Submit" value="Submit" class='btn btn-info' style='float:right'>
 </form>
-
-
-
-
-
-
-
 </div>
+
+<script type="text/javascript">
+
+    try {
+      var url = window.location.href.split('?')[1]
+      console.log(url);
+      if (url == 'e2') {
+        console.log('HERE');
+        document.getElementById('error').style.display = 'inline'
+      }
+    } catch (e) {
+      console.log('Hello There');
+    }
+</script>
