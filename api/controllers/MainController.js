@@ -1,4 +1,13 @@
 /**
+ * @Author: zyousif
+ * @Date:   2019-10-19T20:56:01-07:00
+ * @Last modified by:   zyousif
+ * @Last modified time: 2019-10-19T21:08:00-07:00
+ */
+
+
+
+/**
  * MainController
  *
  * @description :: Server-side actions for handling incoming requests.
@@ -7,27 +16,8 @@
 
 
 var axios = require('axios')
-const crypto = require('crypto');
-const algorithm = 'aes-256-cbc';
-const key = crypto.randomBytes(32);
-const iv = crypto.randomBytes(16);
-
-function encrypt(text) {
- let cipher = crypto.createCipheriv('aes-256-cbc', Buffer.from(key), iv);
- let encrypted = cipher.update(text);
- encrypted = Buffer.concat([encrypted, cipher.final()]);
- return { iv: iv.toString('hex'), encryptedData: encrypted.toString('hex') };
-}
-
-function decrypt(text) {
- let iv = Buffer.from(text.iv, 'hex');
- let encryptedText = Buffer.from(text.encryptedData, 'hex');
- let decipher = crypto.createDecipheriv('aes-256-cbc', Buffer.from(key), iv);
- let decrypted = decipher.update(encryptedText);
- decrypted = Buffer.concat([decrypted, decipher.final()]);
- return decrypted.toString();
-}
-
+var atob = require('atob')
+var btoa = require('btoa')
 module.exports = {
 index: function(req ,res){
 
@@ -47,7 +37,7 @@ if (!data) {
   return res.redirect('/login?e2')
 }
 else{
-res.cookie('token', encrypt(data.uname))
+res.cookie('token', atob(data.uname))
 return res.redirect('/profile')
 
 }
@@ -66,7 +56,7 @@ if (!data) {
   return res.redirect('/signup?e2')
 }
 else{
-res.cookie('token', encrypt(data.uname))
+res.cookie('token', atob(data.uname))
 return res.redirect('/profile')
 
 
@@ -74,7 +64,6 @@ return res.redirect('/profile')
 }
 }
 catch(e){
-
   return res.redirect('/signup?e2')
 
 }
@@ -86,24 +75,15 @@ profile: async function(req, res){
     return res.redirect('/login')
   }
   try {
-  var name = decrypt(req.cookies.token)
-  console.log(name);
-  console.log(req.cookies.token);
+  var name = btoa(req.cookies.token)
   var data = await Main.findOne({'uname' : name})
-
-  var vendor = await VendorMain.find({})
-
-  var finalData = {}
-
-  finalData['user'] = data
-  finalData['vendor'] = vendor
 
   if (!data) {
     console.log('this one');
     return res.redirect('/login')
   }
   else{
-    res.view('profile.ejs', {data : finalData})
+    res.view('profile.ejs', {data : data})
   }
 
   } catch (e) {
@@ -118,6 +98,11 @@ logout: function(req, res){
     res.clearCookie('token')
     return res.redirect('/')
   }
+},
+aboutUs: function(req ,res){
+
+  return res.view('aboutUs.ejs')
+
 }
 
 
