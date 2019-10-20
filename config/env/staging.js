@@ -58,7 +58,7 @@ module.exports = Object.assign({}, PRODUCTION_CONFIG, {
     //--------------------------------------------------------------------------
     // /\  Hard-code your staging Redis server's `url`.
     // ||  (or use system env var: `sails_sockets__url`)
-    //--------------------------------------------------------------------------
+    //---------------------------------------- ----------------------------------
   }),
 
   session: Object.assign({}, PRODUCTION_CONFIG.session, {

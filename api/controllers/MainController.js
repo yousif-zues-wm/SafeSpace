@@ -98,7 +98,7 @@ profile: async function(req, res){
   finalData['user'] = data
   finalData['vendor'] = vendor
 
-  if (!data) {
+  if (!data) { 
     console.log('this one');
     return res.redirect('/login')
   }
@@ -118,15 +118,6 @@ logout: function(req, res){
     res.clearCookie('token')
     return res.redirect('/')
   }
-},
-
-
-// LOGIN SHIT ABOVE
-
-aboutUs: function(req ,res){
-
-  return res.view('aboutUs.ejs')
-
 }
 
 
