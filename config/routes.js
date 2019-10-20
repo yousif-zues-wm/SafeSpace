@@ -16,11 +16,10 @@ module.exports.routes = {
 'GET /signup': 'Main/signup',
 'POST /signup' : 'Main/signupp',
 'GET /profile' : 'Main/profile',
-'GET /vendorlogin' : 'VendorMain/vendorlogin',
-'POST /vendorlogin' : 'VendorMain/vendorloginp',
 'GET /vendorsignup' : 'VendorMain/vendorsignup',
 'POST /vendorsignup' : 'VendorMain/vendorsignupp',
-'GET /vendorprofile' : 'VendorMain/vendorprofile',
 'GET /profile' : 'Main/profile' ,
-'GET /logout' : 'Main/logout' 
+'GET /logout' : 'Main/logout',
+'GET /cprofile' : 'Tickets/profile',
+'POST /cprofile' : 'Tickets/profilep'
 };

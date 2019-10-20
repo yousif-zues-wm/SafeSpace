@@ -67,9 +67,9 @@
                     <div class="card-block p-t-2">
                         <div class="card-header"><h3><%= data.CompanyName %></h3></div><br>
                         <div class="card-text"><p><%= data.Description %></p> <br>
-                          <p><%= data.PhoneNumber %></p><br>
+                          <p>Emergencies Call: <%= data.PhoneNumber %></p><br>
 
-                          <button type="button" class='btn btn-info'  name="button">View <%= data.CompanyName %></button>
+                          <a href="/cprofile?view=<%= data.CompanyName %>">  <button type="button" class='btn btn-info'  name="button">Request <%= data.CompanyName %></button> </a>
 
                         </div><br>
                         <div class="card-footer">
@@ -86,7 +86,7 @@
 
 
 <% val = val + 1 %>
-<% }) %>  
+<% }) %>
 
         </div>
     </div>

@@ -1,5 +1,5 @@
 /**
- * VendorMain.js
+ * Tickets.js
  *
  * @description :: A model definition represents a database table/collection.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
@@ -8,23 +8,22 @@
 module.exports = {
 
   attributes: {
+
     CompanyName: {
       type: 'string',
       required: true,
-      unique: true,
+      unique: false,
       maxLength: 200
     },
-    Description: {
+    desc: {
       type: 'string',
       required: true,
-      unique: true,
-      maxLength: 200
+      unique: false,
     },
-    PhoneNumber: {
+    ct: {
       type: 'string',
       required: true,
-      unique: true,
-      maxLength: 200
+      unique: false,
     }, 
     Submit: {
       type: 'string',
@@ -36,3 +35,4 @@ module.exports = {
   },
 
 };
+

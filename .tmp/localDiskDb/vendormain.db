@@ -2,4 +2,7 @@
 {"$$indexCreated":{"fieldName":"CompanyName","unique":true,"sparse":false}}
 {"$$indexCreated":{"fieldName":"Description","unique":true,"sparse":false}}
 {"$$indexCreated":{"fieldName":"PhoneNumber","unique":true,"sparse":false}}
-{"$$indexCreated":{"fieldName":"uname","unique":true,"sparse":false}}
+{"createdAt":1571559536007,"updatedAt":1571559536007,"id":1,"CompanyName":"Transportation","Description":"Request a ride to remove yourself an unsafe situation","PhoneNumber":"(555)-666-9999","Submit":"Submit","_id":1}
+{"createdAt":1571559800206,"updatedAt":1571559800206,"id":2,"CompanyName":"Housing","Description":"Request overnight stay's away from potentially dangerous situations. ","PhoneNumber":"(111)-222-3334","Submit":"Submit","_id":2}
+{"createdAt":1571561363968,"updatedAt":1571561363968,"id":3,"CompanyName":"Food","Description":"Obtain a way to feed yourself or family","PhoneNumber":"(999) 999-9999","Submit":"Submit","_id":3}
+{"createdAt":1571564467243,"updatedAt":1571564467243,"id":4,"CompanyName":"jeg","Description":"jeg services","PhoneNumber":"(123) 123-1234","Submit":"Submit","_id":4}

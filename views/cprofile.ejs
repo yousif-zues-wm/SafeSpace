@@ -1,0 +1,11 @@
+<br>
+<div class="container">
+<form class="form" action="/cprofile" method="post">
+  <label for="ct">Primary Contact Info</label>
+<input type="text" name="ct" class='form-control' placeholder='Primary Contact Method, (Phone Number to text/email ETC.)' value=""><br>
+<label for="desc">Please Describe the Situation</label>
+<textarea name="desc" class='form-control' rows="8" cols="80" placeholder='Please Describe the Situation'></textarea><br>
+<input type="submit" name="Submit" value="Submit" class='btn btn-info' style='float:right'>
+<input type="hidden" name="CompanyName" value= "<%= data.CompanyName %>" >
+</form>
+</div>
