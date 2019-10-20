@@ -1,4 +1,13 @@
 /**
+ * @Author: zyousif
+ * @Date:   2019-10-20T00:51:18-07:00
+ * @Last modified by:   zyousif
+ * @Last modified time: 2019-10-20T02:58:02-07:00
+ */
+
+
+
+/**
  * MainController
  *
  * @description :: Server-side actions for handling incoming requests.
@@ -40,7 +49,11 @@ login: function(req ,res){
   return res.view('login.ejs')
 
 },
+aboutUs: function(req ,res){
 
+  return res.view('aboutUs.ejs')
+
+},
 loginp: async function(req ,res){
 var data = await Main.findOne(req.allParams())
 if (!data) {
@@ -98,7 +111,7 @@ profile: async function(req, res){
   finalData['user'] = data
   finalData['vendor'] = vendor
 
-  if (!data) { 
+  if (!data) {
     console.log('this one');
     return res.redirect('/login')
   }
