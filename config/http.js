@@ -40,7 +40,7 @@ module.exports.http = {
     //   'favicon',
     // ],
 
-    // trustProxy: true 
+    trustProxy: true 
 
     /***************************************************************************
     *                                                                          *
