@@ -26,18 +26,6 @@ module.exports = {
       unique: true,
       maxLength: 200
     }, 
-    uname: {
-      type: 'string',
-      required: true,
-      unique: true,
-      maxLength: 200
-    },
-    pw: {
-      type: 'string',
-      required: true,
-      unique: false,
-      maxLength: 32
-    },
     Submit: {
       type: 'string',
       required: false,

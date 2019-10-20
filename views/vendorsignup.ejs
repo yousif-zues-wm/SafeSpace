@@ -5,43 +5,17 @@
   </style>
   <div class="container">
     <br>
-  <center>  
-  <h2>Vendor Sign-up</h2><hr>
+  <center>
+  <h2>Service Onboarding</h2><hr>
   </center>
-  <h5 style='color:red;display: none;' id='error'>Error, Username Taken!!!</h5>
+  <h5 style='color:red;display: none;' id='error'>Error, Service-Name Taken!!!</h5>
   <form class="form" action="/vendorsignup" method="post" enctype="multipart/form-data">
-    <label for="uname">Company Name</label>
-    <input  class='form-control' type="text" name="CompanyName" id='CompanyName' placeholder='Company Name' value=""><br>
+    <label for="uname">Service Name</label>
+    <input  class='form-control' type="text" name="CompanyName" id='CompanyName' placeholder='Service Name' value=""><br>
     <label for="Description">Description</label>
     <input  class='form-control' type="text" name="Description" id='Description' placeholder='Description' value=""><br>
-    <label for="PhoneNumber">Phone Number</label>
-    <input  class='form-control' type="tel" id='PhoneNumber' pattern='^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$' name="PhoneNumber" placeholder='Phone Number: +1(111)111-1111' value=""><br>
-    <label for="uname">Username</label>
-    <input  class='form-control' type="text" id='uname' name="uname" placeholder='Username' value=""><br>
-    <label for="pw">Password</label>
-    <input  class='form-control' type="password" id='pw' name="pw" placeholder='Password' value=""><br>
-    <input onclick='see()' type="submit" name='Submit' value='Submit'  class='btn btn-info' style='float:right'>
+    <label for="PhoneNumber">Emergency Phone Number</label>
+    <input  class='form-control' type="tel" id='PhoneNumber' pattern='^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$' name="PhoneNumber" placeholder='Emergency Phone Number: +1(111)111-1111' value=""><br>
+    <input type="submit" name='Submit' value='Submit'  class='btn btn-info' style='float:right'>
   </form>
-
-
-
-
-
-
-
   </div>
-  <script type="text/javascript">
-
-
-    function imageIsLoaded(e) { alert(e); }
-    try {
-      var url = window.location.href.split('?')[1]
-      console.log(url);
-      if (url == 'e=2') {
-        console.log('HERE');
-        document.getElementById('error').style.display = 'inline'
-      }
-    } catch (e) {
-      console.log('Hello There');
-    }
-  </script>
