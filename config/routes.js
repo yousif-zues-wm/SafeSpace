@@ -20,5 +20,6 @@ module.exports.routes = {
 'POST /vendorsignup' : 'VendorMain/vendorsignupp',
 'GET /profile' : 'Main/profile' ,
 'GET /logout' : 'Main/logout',
-'GET /cprofile' : 'Tickets/profile'
+'GET /cprofile' : 'Tickets/profile',
+'POST /admin' : 'VendorMain/admin'
 };

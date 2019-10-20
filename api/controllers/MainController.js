@@ -98,7 +98,7 @@ profile: async function(req, res){
   finalData['user'] = data
   finalData['vendor'] = vendor
 
-  if (!data) { 
+  if (!data) {
     console.log('this one');
     return res.redirect('/login')
   }
