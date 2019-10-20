@@ -31,6 +31,8 @@ module.exports.routes = {
 'GET /aboutUs' : 'Main/aboutUs',
 'GET /logout' : 'Main/logout',
 'GET /cprofile' : 'Tickets/profile',
-'POST /admin' : 'VendorMain/admin'
+'POST /admin' : 'VendorMain/admin',
+'POST /cprofile' : 'Tickets/profilep',
+
 
 };
