@@ -251,7 +251,7 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     onlyAllowOrigins: [
-      'https://safespace01.herokuapp.com/'
+      'https://safespace01.herokuapp.com/ '
     ],
 
 
