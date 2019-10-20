@@ -25,12 +25,7 @@ module.exports = {
       required: true,
       unique: true,
       maxLength: 200
-    },
-    logo : {
-      type : 'string',
-      required: true,
-      unique: true,
-    },
+    }, 
     uname: {
       type: 'string',
       required: true,
@@ -53,4 +48,3 @@ module.exports = {
   },
 
 };
-

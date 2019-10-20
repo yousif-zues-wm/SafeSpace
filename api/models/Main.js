@@ -20,7 +20,7 @@ module.exports = {
       required: true,
       unique: false,
       maxLength: 32
-    },
+    }, 
     Submit: {
       type: 'string',
       required: false,

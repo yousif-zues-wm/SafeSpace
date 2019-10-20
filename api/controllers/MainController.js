@@ -7,11 +7,27 @@
 
 
 var axios = require('axios')
-var atob = require('atob')
-var btoa = require('btoa')
-var express = require('express');
-var passport = require('passport');
-var Strategy = require('passport-facebook').Strategy;
+const crypto = require('crypto');
+const algorithm = 'aes-256-cbc';
+const key = crypto.randomBytes(32);
+const iv = crypto.randomBytes(16);
+
+function encrypt(text) {
+ let cipher = crypto.createCipheriv('aes-256-cbc', Buffer.from(key), iv);
+ let encrypted = cipher.update(text);
+ encrypted = Buffer.concat([encrypted, cipher.final()]);
+ return { iv: iv.toString('hex'), encryptedData: encrypted.toString('hex') };
+}
+
+function decrypt(text) {
+ let iv = Buffer.from(text.iv, 'hex');
+ let encryptedText = Buffer.from(text.encryptedData, 'hex');
+ let decipher = crypto.createDecipheriv('aes-256-cbc', Buffer.from(key), iv);
+ let decrypted = decipher.update(encryptedText);
+ decrypted = Buffer.concat([decrypted, decipher.final()]);
+ return decrypted.toString();
+}
+
 module.exports = {
 index: function(req ,res){
 
@@ -31,7 +47,7 @@ if (!data) {
   return res.redirect('/login?e2')
 }
 else{
-res.cookie('token', atob(data.uname))
+res.cookie('token', encrypt(data.uname))
 return res.redirect('/profile')
 
 }
@@ -50,7 +66,7 @@ if (!data) {
   return res.redirect('/signup?e2')
 }
 else{
-res.cookie('token', atob(data.uname))
+res.cookie('token', encrypt(data.uname))
 return res.redirect('/profile')
 
 
@@ -58,6 +74,7 @@ return res.redirect('/profile')
 }
 }
 catch(e){
+
   return res.redirect('/signup?e2')
 
 }
@@ -69,15 +86,24 @@ profile: async function(req, res){
     return res.redirect('/login')
   }
   try {
-  var name = btoa(req.cookies.token)
+  var name = decrypt(req.cookies.token)
+  console.log(name);
+  console.log(req.cookies.token);
   var data = await Main.findOne({'uname' : name})
 
-  if (!data) {
+  var vendor = await VendorMain.find({})
+
+  var finalData = {}
+
+  finalData['user'] = data
+  finalData['vendor'] = vendor
+
+  if (!data) { 
     console.log('this one');
     return res.redirect('/login')
   }
   else{
-    res.view('profile.ejs', {data : data})
+    res.view('profile.ejs', {data : finalData})
   }
 
   } catch (e) {

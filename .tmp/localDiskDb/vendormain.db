@@ -2,5 +2,4 @@
 {"$$indexCreated":{"fieldName":"CompanyName","unique":true,"sparse":false}}
 {"$$indexCreated":{"fieldName":"Description","unique":true,"sparse":false}}
 {"$$indexCreated":{"fieldName":"PhoneNumber","unique":true,"sparse":false}}
-{"$$indexCreated":{"fieldName":"logo","unique":true,"sparse":false}}
 {"$$indexCreated":{"fieldName":"uname","unique":true,"sparse":false}}
