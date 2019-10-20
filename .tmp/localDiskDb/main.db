@@ -1,4 +1,2 @@
 {"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
 {"$$indexCreated":{"fieldName":"uname","unique":true,"sparse":false}}
-{"createdAt":1571524349384,"updatedAt":1571524349384,"id":1,"uname":"test","pw":"test","Submit":"Submit","_id":1}
-{"createdAt":1571524423216,"updatedAt":1571524423216,"id":2,"uname":"felix","pw":"1234","Submit":"Submit","_id":2}

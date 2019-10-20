@@ -23,4 +23,5 @@ module.exports.routes = {
 'GET /vendorprofile' : 'VendorMain/vendorprofile',
 'GET /profile' : 'Main/profile' ,
 'GET /logout' : 'Main/logout'
+
 };

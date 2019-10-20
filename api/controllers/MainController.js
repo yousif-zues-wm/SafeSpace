@@ -9,6 +9,9 @@
 var axios = require('axios')
 var atob = require('atob')
 var btoa = require('btoa')
+var express = require('express');
+var passport = require('passport');
+var Strategy = require('passport-facebook').Strategy;
 module.exports = {
 index: function(req ,res){
 
