@@ -251,7 +251,7 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     onlyAllowOrigins: [
-      '*'
+      'https://https://safe-space-cad.herokuapp.com/'
     ],
 
 
