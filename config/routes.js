@@ -1,4 +1,13 @@
 /**
+ * @Author: zyousif
+ * @Date:   2019-10-20T00:51:18-07:00
+ * @Last modified by:   zyousif
+ * @Last modified time: 2019-10-20T04:19:20-07:00
+ */
+
+
+
+/**
  * Route Mappings
  * (sails.config.routes)
  *
@@ -19,7 +28,9 @@ module.exports.routes = {
 'GET /vendorsignup' : 'VendorMain/vendorsignup',
 'POST /vendorsignup' : 'VendorMain/vendorsignupp',
 'GET /profile' : 'Main/profile' ,
+'GET /aboutUs' : 'Main/aboutUs',
 'GET /logout' : 'Main/logout',
 'GET /cprofile' : 'Tickets/profile',
-'POST /cprofile' : 'Tickets/profilep'
+'POST /admin' : 'VendorMain/admin'
+
 };
