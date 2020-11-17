@@ -132,9 +132,7 @@ logout: function(req, res){
     return res.redirect('/')
   }
 }
-
-
-// LOGIN SHIT ABOVE
+// Login Above
 
 
 
